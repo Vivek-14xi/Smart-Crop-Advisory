@@ -1,0 +1,76 @@
+﻿# Environment variables and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python virtual environments
+venv/
+.venv/
+env/
+backend/venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node.js dependencies and build output
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+
+# Local configuration and editor files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Project backups
+backups/
+**/backups/
+auth_backup_*/
+backup-*/
+backup_*/
+backup_*/
+src_backup_*/
+**/backup_*/
+**/backup-*/
+**/auth_backup_*/
+**/src_backup_*/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local databases and generated backups
+*.db
+*.db-*
+**/*backup*
+**/*backup_*
+**/*.bak
+**/*.before_*
+**/*.prebuild.*
+**/*.fix-backup*
+frontend/translation_backups/
+frontend/translation-backup-farmer-account/
+
+# Temporary files and alternate backups
+**/*backup*/
+**/*.bak
+**/*.before-*
+**/*.before_*
+**/*.prebuild*
+**/*.fix-backup*
+frontend/weather-build-error.txt
+frontend/weather-build-full.txt
+commit_log.md
+
+# Temporary About page fix files
+frontend/src/pages/About.blankfix_*.jsx
+
+# Ignore unused root npm lock file
+/package-lock.json

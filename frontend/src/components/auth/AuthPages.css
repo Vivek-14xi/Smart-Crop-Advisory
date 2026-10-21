@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap");
+
+/* Scoped to .ca-auth so global CSS is untouched.
+   Put your photo at public/images/crop-field.jpg; the gradient is the fallback. */
+.ca-auth {
+  --forest: #1f4d2e;
+  --forest-dark: #163a22;
+  --sage: #7f9f7a;
+  --sage-soft: #eaf3e6;
+  --line: #dce6d7;
+  --ink: #2d3a31;
+  --muted: #5d6b61;
+  --danger: #b3392f;
+
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: clamp(16px, 4vw, 48px);
+  font-family: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background-image:
+    linear-gradient(rgba(244, 250, 240, 0.72), rgba(233, 243, 227, 0.84)),
+    url("/images/crop-field.jpg"),
+    linear-gradient(135deg, #e4efdd, #c9dec1);
+  background-size: cover;
+  background-position: center;
+}
+
+.ca-auth-card {
+  width: min(100%, 440px);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: clamp(24px, 5vw, 40px);
+  box-shadow: 0 18px 48px rgba(31, 77, 46, 0.14);
+}
+
+.ca-auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--forest);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.ca-auth-card h1 {
+  margin: 0 0 6px;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.6rem, 4vw, 1.95rem);
+  line-height: 1.15;
+  color: var(--forest);
+}
+
+.ca-auth-sub {
+  margin: 0 0 24px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.ca-form { display: grid; gap: 16px; }
+.ca-field label { display: block; margin-bottom: 6px; font-size: 0.875rem; font-weight: 600; }
+
+.ca-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--muted);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.ca-input:hover { border-color: var(--sage); }
+.ca-input:focus-within {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px rgba(127, 159, 122, 0.3);
+}
+.ca-input--error,
+.ca-input--error:hover { border-color: var(--danger); }
+
+.ca-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem; /* 16px stops iOS zoom on focus */
+}
+
+.ca-eye {
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+}
+.ca-eye:hover { color: var(--forest); }
+.ca-eye:focus-visible,
+.ca-btn:focus-visible { outline: 3px solid var(--sage); outline-offset: 2px; }
+
+.ca-error { margin: 6px 0 0; font-size: 0.8125rem; color: var(--danger); }
+
+.ca-alert {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border: 1px solid #efc3bf;
+  border-radius: 12px;
+  background: #fbeceb;
+  color: #8f2a22;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+.ca-alert svg { flex-shrink: 0; margin-top: 2px; }
+.ca-alert--ok { border-color: var(--line); background: var(--sage-soft); color: var(--forest); }
+
+.ca-check { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; cursor: pointer; }
+.ca-check input { width: 18px; height: 18px; margin: 1px 0 0; accent-color: var(--forest); }
+
+.ca-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--forest);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.ca-btn:hover:not(:disabled) { background: var(--forest-dark); }
+.ca-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.ca-auth-switch { margin: 22px 0 0; text-align: center; color: var(--muted); font-size: 0.9375rem; }
+.ca-auth-switch a { color: var(--forest); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.ca-auth-switch a:hover { color: var(--forest-dark); }
+
+@keyframes ca-spin { to { transform: rotate(360deg); } }
+.ca-spin { animation: ca-spin 1s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ca-spin { animation-duration: 2.5s; }
+  .ca-input, .ca-btn { transition: none; }
+}
