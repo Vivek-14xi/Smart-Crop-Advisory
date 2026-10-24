@@ -97,14 +97,34 @@ function Login({ onLogin }) {
                 <label className="form-label">
                   {method === 'email' ? t('auth.emailAddress') : t('auth.phoneNumber')}
                 </label>
-                <input
-                  type={method === 'email' ? 'email' : 'tel'}
-                  className="form-input"
-                  value={identifier}
-                  onChange={(e) => setIdentifier(e.target.value)}
-                  placeholder={method === 'email' ? t('auth.emailPlaceholder') : t('auth.phonePlaceholder')}
-                  required
-                />
+               
+<input
+  type={method === 'email' ? 'email' : 'tel'}
+  inputMode={method === 'sms' ? 'numeric' : 'email'}
+  pattern={method === 'sms' ? '[6-9][0-9]{9}' : undefined}
+  maxLength={method === 'sms' ? 10 : undefined}
+  className="form-input"
+  value={identifier}
+  onChange={(e) => {
+    const value = e.target.value
+
+    if (method === 'sms') {
+      setIdentifier(value.replace(/\D/g, '').slice(0, 10))
+    } else {
+      setIdentifier(value)
+    }
+
+    setError('')
+    setMessage('')
+  }}
+  placeholder={
+    method === 'email'
+      ? t('auth.emailPlaceholder')
+      : 'Enter 10-digit mobile number'
+  }
+  required
+/>
+
               </div>
 
               <button type="submit" className="btn btn-primary btn-block" disabled={loading}>

@@ -1,4 +1,4 @@
-﻿from pathlib import Path
+from pathlib import Path
 from pydantic_settings import BaseSettings
 from functools import lru_cache
 
@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     twilio_account_sid: str = ""
     twilio_auth_token: str = ""
     twilio_phone_number: str = ""
-    mock_otp_enabled: bool = False
+    mock_otp_enabled: bool = True
     google_translate_api_key: str = ""
     data_gov_in_api_key: str = ""  # For market prices (data.gov.in)
     
