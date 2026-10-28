@@ -19,12 +19,19 @@ import './Landing.css'
 import './About.css'
 
 const teamMembers = [
+    {
+    name: 'Arya Navrang',
+    initials: 'AN',
+    number: '05',
+    linkedin: 'https://www.linkedin.com/in/arya-navrang/'
+  },
   {
     name: 'Vansh Tripathi',
     initials: 'VT',
     number: '01',
     linkedin: 'https://www.linkedin.com/in/vansh-tripathi-1615a6315/'
   },
+ 
   {
     name: 'Vikram Goutam',
     initials: 'VG',
@@ -43,12 +50,7 @@ const teamMembers = [
     number: '04',
     linkedin: 'https://www.linkedin.com/in/zaid-siddiqui-6b31573b9/'
   },
-  {
-    name: 'Arya Navrang',
-    initials: 'AN',
-    number: '05',
-    linkedin: 'https://www.linkedin.com/in/arya-navrang/'
-  }
+ 
 ]
 
 const technologies = [

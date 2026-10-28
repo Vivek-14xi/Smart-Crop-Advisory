@@ -43,7 +43,7 @@ function Landing() {
           </div>
 
           <Link to="/credit" className="landing-nav-link">
-            Credit
+            Astra-06
           </Link>
 
           <Link to="/login" className="landing-nav-link">
@@ -71,7 +71,7 @@ function Landing() {
           <p className="landing-eyebrow">
             <span />
             {t('landing.eyebrow', {
-              defaultValue: 'Krishi Mitra SYSTEM',
+              defaultValue: 'KRISHI ASTRA SYSTEM',
             })}
           </p>
 
