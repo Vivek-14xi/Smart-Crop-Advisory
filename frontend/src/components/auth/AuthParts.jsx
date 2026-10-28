@@ -7,7 +7,7 @@ export function AuthShell({ title, subtitle, footer, children }) {
       <section className="ca-auth-card" aria-labelledby="ca-auth-title">
         <div className="ca-auth-brand">
           <Sprout size={22} aria-hidden="true" />
-          <span>Crop Advisory</span>
+          <span>Krishi Mitra</span>
         </div>
         <h1 id="ca-auth-title">{title}</h1>
         <p className="ca-auth-sub">{subtitle}</p>

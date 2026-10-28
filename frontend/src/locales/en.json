@@ -1,5 +1,5 @@
 {
-    "brand":  "Crop Advisory",
+    "brand":  "Krishi Mitra",
     "common":  {
                    "back":  "Back",
                    "backToDashboard":  "Back to Dashboard",
@@ -262,14 +262,14 @@
                     "weatherIntelligence":  "Weather Intelligence",
                     "pestDisease":  "Pest and Disease Examine",
                     "profitMarket":  "Profit and Market Analyzer",
-                    "brand":  "Crop Advisory",
+                    "brand":  "Krishi Mitra",
                     "tagline":  "SMART AGRICULTURE",
                     "mainMenu":  "MAIN MENU",
                     "dashboard":  "Dashboard",
                     "growSmarter":  "Grow smarter.",
                     "growDescription":  "Make informed decisions for a healthier and more productive farm.",
-                    "footerBrand":  "Smart Crop Advisory",
-                    "navbarBrand":  "SMART CROP ADVISORY",
+                    "footerBrand":  "Krishi Mitra",
+                    "navbarBrand":  "Krishi Mitra",
                     "farmIntelligence":  "Farm Intelligence",
                     "farmerAccount":  "Farmer Account"
                 },

@@ -71,7 +71,7 @@ function Landing() {
           <p className="landing-eyebrow">
             <span />
             {t('landing.eyebrow', {
-              defaultValue: 'SMART CROP ADVISORY SYSTEM',
+              defaultValue: 'Krishi Mitra SYSTEM',
             })}
           </p>
 
@@ -124,7 +124,7 @@ function Landing() {
         <div className="landing-features-heading">
           <p className="landing-section-eyebrow">
             {t('landing.eyebrow', {
-              defaultValue: 'SMART CROP ADVISORY SYSTEM',
+              defaultValue: 'Krishi Mitra SYSTEM',
             })}
           </p>
 

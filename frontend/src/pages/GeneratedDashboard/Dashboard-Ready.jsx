@@ -120,7 +120,7 @@ export default function Dashboard({ user = {}, onLogout, onUserUpdate }) {
   return (
     <div className="cad">
       <aside className={`cad-side ${open ? "open" : ""}`}>
-        <div className="cad-logo"><Leaf size={30} /> Crop Advisory</div>
+        <div className="cad-logo"><Leaf size={30} /> Krishi Mitra</div>
         <nav className="cad-nav" onClick={() => setOpen(false)}>
           <NavLink to="/dashboard" end><Home size={20} /> Dashboard</NavLink>
           {FEATURES.map((f) => (

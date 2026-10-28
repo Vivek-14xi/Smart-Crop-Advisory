@@ -1,4 +1,4 @@
-"""
+﻿"""
 Gemini API service - Uses google-genai SDK (matches reference implementation).
 Optimized for FREE tier with strict quota protection.
 """
@@ -86,7 +86,7 @@ def _wait_rate_limit():
 def get_gemini_response(prompt: str, temperature: float = 0.7, use_cache: bool = True) -> str:
     """
     Get Gemini response using google-genai SDK (matches reference implementation).
-    client.models.generate_content(model="gemini-3.8-flash", contents=prompt)
+    client.models.generate_content(model="gemini-3.6-flash", contents=prompt)
     """
     cache_key = _get_cache_key(prompt, temperature)
 
@@ -109,10 +109,10 @@ def get_gemini_response(prompt: str, temperature: float = 0.7, use_cache: bool =
 
         print("[API] Gemini request")
         try:
-            # Match reference: client.models.generate_content(model="gemini-3.8-flash", contents=prompt)
+            # Match reference: client.models.generate_content(model="gemini-3.6-flash", contents=prompt)
             _timing_start = time.perf_counter()
             response = client.models.generate_content(
-                model="gemini-3.8-flash",
+                model="gemini-3.6-flash",
                 contents=prompt,
                 config=types.GenerateContentConfig(temperature=temperature),
             )
@@ -456,3 +456,4 @@ def get_cache_stats() -> dict:
         "valid_cached": valid,
         "cache_duration_sec": CACHE_DURATION_SEC,
     }
+
