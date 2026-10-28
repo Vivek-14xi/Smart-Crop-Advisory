@@ -124,7 +124,7 @@ function Landing() {
         <div className="landing-features-heading">
           <p className="landing-section-eyebrow">
             {t('landing.eyebrow', {
-              defaultValue: 'Krishi Mitra SYSTEM',
+              defaultValue: 'KRISHI ASTRA SYSTEM',
             })}
           </p>
 

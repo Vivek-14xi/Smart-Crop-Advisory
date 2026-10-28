@@ -218,7 +218,7 @@ function About() {
                 <h3>Vivek Dashariye</h3>
 
                 <p className="premium-leader-role">
-                  Team Leader · Smart Crop Advisory
+                  Team Leader · Krishi Astra
                 </p>
 
                 <a
@@ -345,7 +345,7 @@ function About() {
                 <h3>Six minds. One vision. A smarter future.</h3>
 
                 <p>
-                  Smart Crop Advisory is a team effort built around a shared
+                  Krishi Astra is a team effort built around a shared
                   idea: technology should help solve real problems. We are
                   proud to present our collective work toward smarter and
                   more sustainable agriculture.
@@ -373,7 +373,7 @@ function About() {
               </h2>
 
               <p>
-                Smart Crop Advisory brings agricultural information and
+                Krishi Astra brings agricultural information and
                 technology together to support better-informed farming
                 decisions.
               </p>
@@ -432,7 +432,7 @@ function About() {
               <h2>Powered by technology<span>.</span></h2>
 
               <p>
-                A modern technology stack supporting the Smart Crop Advisory
+                A modern technology stack supporting the Krishi Astra
                 experience.
               </p>
             </div>
@@ -482,7 +482,7 @@ function About() {
         <div className="container">
           <p>{t('landing.copyright')}</p>
           <p className="premium-footer-credit">
-            Crafted with purpose by the Smart Crop Advisory team.
+            Crafted with purpose by the Krishi Astra team.
           </p>
         </div>
       </footer>
